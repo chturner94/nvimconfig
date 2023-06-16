@@ -1,0 +1,3 @@
+# Ignore pack/ and plugin/ files
+pack/*
+plugin/*
