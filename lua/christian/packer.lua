@@ -55,5 +55,5 @@ use {
     {'nvim-lua/plenary.nvim'},
   }
 }
-
+use('vimwiki/vimwiki')
 end)
