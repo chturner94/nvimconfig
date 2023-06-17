@@ -6,4 +6,7 @@ function ColorOverride(color)
 	vim.api.nvim_set_hl(0, "normalFloat", { bg = "#17161D" })
 end
 
+
+
+
 ColorOverride()

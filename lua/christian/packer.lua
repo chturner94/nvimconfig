@@ -56,4 +56,11 @@ use {
   }
 }
 use('vimwiki/vimwiki')
+use('romgrk/barbar.nvim')
+use('nvim-tree/nvim-web-devicons')
+use {
+'glepnir/galaxyline.nvim',
+    branch = 'main',
+    -- some optional icons
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}}
 end)
