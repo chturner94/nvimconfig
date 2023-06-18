@@ -14,4 +14,7 @@ Just like that, it should now work.
 
 ## Setup for script building to automate this set up
 Some dependencies were determined to be had which included python3, python3vim and nodejs. NodeJS needs to be installed using curl from the official source rather than using apt.
-To automate with a script we will need to ensure we have all of the dependencies, and make a gitpull from a repo with our configuration ready to go. then We can hopefully do the PackerSync stuff in order to have this working out of the box. Still a few dracula configs I'd like to figure out. 
+To automate with a script we will need to ensure we have all of the dependencies, and make a gitpull from a repo with our configuration ready to go. then We can hopefully do the PackerSync stuff in order to have this working out of the box. Still a few dracula configs I'd like to figure out.
+
+## Fonts
+We can install hack with sudo apt install fonts-hack-ttf
