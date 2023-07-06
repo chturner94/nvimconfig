@@ -1,2 +1,3 @@
 require("hyperdrive.plugins")
-require("hyperdrive.drive_config")
+require("hyperdrive.drivetrain_tuning")
+require("hyperdrive.options")

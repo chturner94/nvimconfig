@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-    'dracula/vim',
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
@@ -26,6 +25,9 @@ local plugins = {
     'mfussenegger/nvim-dap',
     'rcarriga/nvim-dap-ui',
 
+    -- themes
+    'Mofiqul/dracula.nvim',
+    
     -- completion
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
@@ -41,7 +43,18 @@ local plugins = {
 	  'nvim-telescope/telescope.nvim',
 	  tag = '0.1.2',
 	  dependencies = { {'nvim-lua/plenary.nvim'} }
-  }
+  },
+
+  -- more complex configs 
+  -- Which Key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+	    vim.o.timeout = true
+	    vim.o.timeoutlen = 300
+    end,
+  },
 
 }
 
