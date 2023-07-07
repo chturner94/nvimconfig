@@ -13,21 +13,24 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
+    -- Utility
     'nvim-tree/nvim-tree.lua',
-    'nvim-tree/nvim-web-devicons',
-    'nvim-lualine/lualine.nvim',
     'nvim-treesitter/nvim-treesitter',
-    'lewis6991/gitsigns.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-commentary',
+    'tpope/vim-surround',
+    'mbbill/undotree',
 
     -- dap
     'mfussenegger/nvim-dap',
     'rcarriga/nvim-dap-ui',
 
-    -- themes
+    -- themes & UI
     'Mofiqul/dracula.nvim',
-    
+    'nvim-tree/nvim-web-devicons',
+    'nvim-lualine/lualine.nvim',
+    'lewis6991/gitsigns.nvim',
+
     -- completion
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
