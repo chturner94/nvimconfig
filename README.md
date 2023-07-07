@@ -18,3 +18,8 @@ To automate with a script we will need to ensure we have all of the dependencies
 
 ## Fonts
 We can install hack with sudo apt install fonts-hack-ttf
+
+## Installs
+1. npm needs to be installed up to 18
+2. install font-config
+3. install `npm install -g tree-sitter-cli`

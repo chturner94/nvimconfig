@@ -30,6 +30,7 @@ local plugins = {
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
+    { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
 
     -- completion
     'hrsh7th/nvim-cmp',
@@ -57,6 +58,18 @@ local plugins = {
 	    vim.o.timeout = true
 	    vim.o.timeoutlen = 300
     end,
+  },
+  {
+    'ray-x/navigator.lua',
+    requires = {
+        { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+        { 'neovim/nvim-lspconfig' },
+    },
+  },
+  {
+      "amrbashir/nvim-docs-view",
+      opt = true,
+      cmd = { "DocsViewToggle" },
   },
 
 }
