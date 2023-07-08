@@ -23,3 +23,19 @@ We can install hack with sudo apt install fonts-hack-ttf
 1. npm needs to be installed up to 18
 2. install font-config
 3. install `npm install -g tree-sitter-cli`
+
+
+### Neorg
+1. depends on treesitter
+2. treesitter must have cpp installed
+3. download devtools from package manager
+    a. debian, ubuntu
+        ```
+        sudo apt-get update
+        sudo apt-get install build-essential manpages-dev
+        ```
+    b. Fedora, Redhat, CentoOS
+        ```
+        yum groupinstall 'Development Tools'
+        ```
+
