@@ -16,6 +16,7 @@ local plugins = {
     -- Libraries
     'nvim-lua/plenary.nvim',
     'nvim-lua/popup.nvim',
+    'stevearc/dressing.nvim',
     -- Utility
     'nvim-tree/nvim-tree.lua',
     {
@@ -27,6 +28,14 @@ local plugins = {
     'tpope/vim-surround',
     'mbbill/undotree',
     'nikvdp/neomux',
+    {
+        'ziontee113/icon-picker.nvim',
+        config = function()
+            require('icon-picker').setup({
+                disable_legacy_commands = true,
+            })
+        end,
+    },
     {
         'sudormrfbin/cheatsheet.nvim',
         dependencies = {
@@ -48,9 +57,9 @@ local plugins = {
         config = function()
             require("neorg").setup {
                 load = {
-                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.defaults"] = {},  -- Loads default behaviour
                     ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                    ["core.dirman"] = { -- Manages Neorg workspaces
+                    ["core.dirman"] = {      -- Manages Neorg workspaces
                         config = {
                             workspaces = {
                                 home = "~/notes/home",
