@@ -1,3 +1,5 @@
 # Ignore pack/ and plugin/ files
 pack/*
 plugin/*
+lazy-lock.json
+.luarc.json
