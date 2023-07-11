@@ -1,7 +1,52 @@
-require('telescope').setup()
-local builtin = require('telescope.builtin')
+require('telescope').load_extension('project')
+require('telescope').load_extension('frecency')
 
-vim.keymap.set('n', '<c-p>', builtin.find_files, {})
-vim.keymap.set('n', '<Space><Space>', builtin.oldfiles, {})
-vim.keymap.set('n', '<Space>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<Space>fh', builtin.help_tags, {})
+local project_actions = require('telescope._extensions.project.actions')
+
+
+
+
+
+require('telescope').setup {
+    defaults = {
+        shorten_path = true,
+        winblend = 0,
+        width = 0.75,
+        preview_cutoff = 120,
+        results_height = 1,
+        results_width = 0.8,
+        border = {},
+        borderchars = {
+            '─', '│', '─', '│', '╭', '╮', '╯', '╰',
+        },
+        color_devicons = true,
+    },
+    extensions = {
+        fzf = {
+            fuzzy = true,                   -- false will only do exact matching
+            override_generic_sorter = true, -- override the generic sorter
+            override_file_sorter = true,    -- override the file sorter
+            case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+            -- the default case_mode is "smart_case"
+        },
+        file_browser = {
+            hijack_netrw = false,
+        },
+        project = {
+            base_dirs = {
+                '~/development/javascript/fvtt-knowledge-recalled-pf2e',
+            },
+            order_by = 'recent',
+            on_project_selected = function(prompt_bufnr)
+                project_actions.changeworking_directory(prompt_bufnr, false)
+                require('harpoon.ui').nav_file(1)
+            end,
+        },
+    },
+}
+
+
+
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('file_browser')
+require "telescope".load_extension("frecency")

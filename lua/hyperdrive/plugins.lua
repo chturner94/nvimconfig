@@ -18,7 +18,18 @@ local plugins = {
     'nvim-lua/popup.nvim',
     'stevearc/dressing.nvim',
     -- Utility
-    'nvim-tree/nvim-tree.lua',
+
+    -- NeoTree
+    {
+        'nvim-neo-tree/neo-tree.nvim',
+        branch = 'v2.x',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons',
+            'MunifTanjim/nui.nvim',
+        },
+    },
+    -- Treesitter
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate'
@@ -26,8 +37,10 @@ local plugins = {
     'tpope/vim-fugitive',
     'tpope/vim-commentary',
     'tpope/vim-surround',
+    'ThePrimeagen/harpoon',
     'mbbill/undotree',
     'nikvdp/neomux',
+    -- Icon Picker
     {
         'ziontee113/icon-picker.nvim',
         config = function()
@@ -36,6 +49,7 @@ local plugins = {
             })
         end,
     },
+    -- Cheat Sheet
     {
         'sudormrfbin/cheatsheet.nvim',
         dependencies = {
@@ -50,6 +64,8 @@ local plugins = {
     'rcarriga/nvim-dap-ui',
 
     -- notes & docs
+
+    -- Neorg
     {
         "nvim-neorg/neorg",
         build = ":Neorg sync-parsers",
@@ -73,12 +89,18 @@ local plugins = {
             }
         end,
     },
+
     -- themes & UI
-    'Mofiqul/dracula.nvim',
+    { 'dracula/vim', as = 'dracula' },
     'nvim-tree/nvim-web-devicons',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
-    { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+    -- Guihua
+    {
+        'ray-x/guihua.lua',
+        run = 'cd lua/fzy && make'
+    },
+    -- Barbar
     {
         'romgrk/barbar.nvim',
         dependencies = {
@@ -106,13 +128,35 @@ local plugins = {
     'saadparwaiz1/cmp_luasnip',
     "rafamadriz/friendly-snippets",
     "github/copilot.vim",
+    -- Telescope
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
+    'nvim-telescope/telescope-project.nvim',
+    {
+        'nvim-telescope/telescope-file-browser.nvim',
+        dependencies = {
+            'nvim-telescope/telescope.nvim',
+            'nvim-lua/plenary.nvim',
+            'nvim-tree/nvim-web-devicons',
+        },
 
-    -- more complex configs
+    },
+    'nvim-telescope/telescope-ui-select.nvim',
+    {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+    },
+    {
+        'nvim-telescope/telescope-frecency.nvim',
+        dependencies = {
+            'kkharji/sqlite.lua',
+            'nvim-tree/nvim-web-devicons',
+        },
+    },
+
     -- Which Key
     {
         "folke/which-key.nvim",
@@ -124,8 +168,8 @@ local plugins = {
     },
     {
         'ray-x/navigator.lua',
-        requires = {
-            { 'ray-x/guihua.lua',     run = 'cd lua/fzy && make' },
+        dependencies = {
+            { 'ray-x/guihua.lua',     build = 'cd lua/fzy && make' },
             { 'neovim/nvim-lspconfig' },
         },
     },
