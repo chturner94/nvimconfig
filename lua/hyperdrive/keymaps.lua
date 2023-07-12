@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>u', '<Cmd>UndotreeToggle<CR>')
 -- Icon Picker
 vim.keymap.set('n', '<leader><leader>i', '<cmd>IconPickerNormal<cr>', opts)
 vim.keymap.set('n', '<leader><leader>y', '<cmd>IconPickerYank<cr>', opts)
-vim.keymap.set('i', '<C-i>', '<cmd>IconPickerInsert<cr>', opts)
+vim.keymap.set('i', '<A-i>', '<cmd>IconPickerInsert<cr>', opts)
 
 
 -- Telescope
