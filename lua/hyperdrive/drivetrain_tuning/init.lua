@@ -1,4 +1,5 @@
 require('hyperdrive.drivetrain_tuning.barbar')
+require('hyperdrive.drivetrain_tuning.buffers')
 require('hyperdrive.drivetrain_tuning.completions')
 require('hyperdrive.drivetrain_tuning.dracula')
 require('hyperdrive.drivetrain_tuning.docs_view')

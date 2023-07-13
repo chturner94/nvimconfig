@@ -17,13 +17,14 @@ local plugins = {
     'nvim-lua/plenary.nvim',
     'nvim-lua/popup.nvim',
     'stevearc/dressing.nvim',
+    'MunifTanjim/nui.nvim',
     -- Utility
 
     -- NeoTree
     {
         'nvim-neo-tree/neo-tree.nvim',
         branch = 'v2.x',
-        dependencies = {
+        depedencies = {
             'nvim-lua/plenary.nvim',
             'nvim-tree/nvim-web-devicons',
             'MunifTanjim/nui.nvim',
@@ -58,6 +59,8 @@ local plugins = {
             'nvim-lua/plenary.nvim',
         },
     },
+    -- bufresize
+    'kwkarlwang/bufresize.nvim',
 
     -- dap
     'mfussenegger/nvim-dap',
