@@ -1,7 +1,7 @@
 require('hyperdrive.drivetrain_tuning.barbar')
 require('hyperdrive.drivetrain_tuning.buffers')
 require('hyperdrive.drivetrain_tuning.completions')
-require('hyperdrive.drivetrain_tuning.dracula')
+-- require('hyperdrive.drivetrain_tuning.dracula')
 require('hyperdrive.drivetrain_tuning.docs_view')
 require('hyperdrive.drivetrain_tuning.file-tree')
 require('hyperdrive.drivetrain_tuning.gitsigns')

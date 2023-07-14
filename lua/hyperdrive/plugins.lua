@@ -18,6 +18,40 @@ local plugins = {
     'nvim-lua/popup.nvim',
     'stevearc/dressing.nvim',
     'MunifTanjim/nui.nvim',
+    -- themes & UI
+    {
+        'dracula_pro',
+        lazy = false,
+        dir = '~/.config/dracula_pro',
+        priority = 1000,
+        config = function()
+            vim.cmd([[colorscheme dracula_pro]])
+        end,
+    },
+    'nvim-tree/nvim-web-devicons',
+    'nvim-lualine/lualine.nvim',
+    'lewis6991/gitsigns.nvim',
+    -- Guihua
+    {
+        'ray-x/guihua.lua',
+        run = 'cd lua/fzy && make'
+    },
+    -- Barbar
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+            -- animation = true,
+            -- insert_at_start = true,
+            -- …etc.
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
+    },
     -- Utility
 
     -- NeoTree
@@ -93,32 +127,7 @@ local plugins = {
         end,
     },
 
-    -- themes & UI
-    { 'dracula/vim', as = 'dracula' },
-    'nvim-tree/nvim-web-devicons',
-    'nvim-lualine/lualine.nvim',
-    'lewis6991/gitsigns.nvim',
-    -- Guihua
-    {
-        'ray-x/guihua.lua',
-        run = 'cd lua/fzy && make'
-    },
-    -- Barbar
-    {
-        'romgrk/barbar.nvim',
-        dependencies = {
-            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
-            'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-        },
-        init = function() vim.g.barbar_auto_setup = false end,
-        opts = {
-            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-            -- animation = true,
-            -- insert_at_start = true,
-            -- …etc.
-        },
-        version = '^1.0.0', -- optional: only update when a new 1.x version is released
-    },
+
 
     -- completion
     "williamboman/mason.nvim",
