@@ -7,8 +7,6 @@ vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-
 vim.keymap.set('n', '<leader>td', '<Cmd>DocsViewToggle<CR>')
 vim.keymap.set('n', '<leader>u', '<Cmd>UndotreeToggle<CR>')
 
@@ -38,3 +36,12 @@ vim.keymap.set('n', 'flD', tele_builtin.lsp_definitions, {})
 
 -- NeoTree
 vim.keymap.set('n', '<leader>tt', '<Cmd>NeoTreeFocusToggle<CR>')
+
+-- Harpoon
+vim.keymap.set('n', '<leader>hh', '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
+vim.keymap.set('n', '<leader>ha', '<Cmd>lua require("harpoon.mark").add_file()<CR>')
+vim.keymap.set('n', '<leader>h1', '<Cmd>lua require("harpoon.ui").nav_file(1)<CR>')
+vim.keymap.set('n', '<leader>h2', '<Cmd>lua require("harpoon.ui").nav_file(2)<CR>')
+vim.keymap.set('n', '<leader>h3', '<Cmd>lua require("harpoon.ui").nav_file(3)<CR>')
+vim.keymap.set('n', '<leader>h4', '<Cmd>lua require("harpoon.ui").nav_file(4)<CR>')
+vim.keymap.set('n', '<leader>h5', '<Cmd>lua require("harpoon.ui").nav_file(5)<CR>')
