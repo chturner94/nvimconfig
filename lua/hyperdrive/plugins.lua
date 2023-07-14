@@ -168,6 +168,7 @@ local plugins = {
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
+        opts = {},
     },
     {
         'ray-x/navigator.lua',
