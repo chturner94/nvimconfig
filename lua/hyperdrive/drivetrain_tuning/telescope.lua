@@ -3,10 +3,6 @@ require('telescope').load_extension('frecency')
 
 local project_actions = require('telescope._extensions.project.actions')
 
-
-
-
-
 require('telescope').setup {
     defaults = {
         shorten_path = true,
@@ -45,8 +41,9 @@ require('telescope').setup {
     },
 }
 
-
-
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('file_browser')
 require "telescope".load_extension("frecency")
+
+require('projections').setup({})
+require('telescope').load_extension('projections')
