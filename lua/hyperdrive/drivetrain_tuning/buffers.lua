@@ -4,7 +4,7 @@ require('bufresize').setup({
         keys = {
             { 'n', '<C-w><', '30<C-w><',     opts },
             { 'n', '<C-w>>', '30<C-w>>',     opts },
-            { 'n', '<C-w>+', '10<C-w>+',     opts },
+            { 'n', '<C-w>',  '10<C-w>+',     opts },
             { 'n', '<C-w>-', '10<C-w>-',     opts },
             { 'n', '<C-w>_', '<C-w>_',       opts },
             { 'n', '<C-w>=', '<C-w>=',       opts },

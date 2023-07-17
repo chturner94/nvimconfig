@@ -259,3 +259,7 @@ require("neo-tree").setup({
 })
 
 vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+
+require('oil').setup({
+    default_file_explorer = false,
+})

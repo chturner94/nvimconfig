@@ -14,6 +14,6 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 
 local Workspace = require("projections.workspace")
 -- Add workspace command
-vim.api.nvim_create_user_command("AddWorkspace", function() 
-    Workspace.add(vim.loop.cwd()) 
+vim.api.nvim_create_user_command("AddWorkspace", function()
+    Workspace.add(vim.loop.cwd())
 end, {})
