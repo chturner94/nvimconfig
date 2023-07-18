@@ -53,11 +53,6 @@ local plugins = {
         version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
     -- Utility
-    {
-        'stevearc/oil.nvim',
-        opts = {},
-        dependencies = 'nvim-tree/nvim-web-devicons',
-    },
     -- NeoTree
     {
         'nvim-neo-tree/neo-tree.nvim',
@@ -130,7 +125,7 @@ local plugins = {
             }
         end,
     },
-
+    -- LSP & Completion
     {
         'vonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -148,9 +143,11 @@ local plugins = {
             'hrsh7th/cmp-nvim-lua',
 
             -- snippets
-            'L3MON4D3/LuaSnip',
-            'rafamdriz/friendly-snippets',
-        }
+            {
+                'L3MON4D3/LuaSnip',
+                dependencies = "rafamadriz/friendly-snippets",
+            },
+        },
     },
     {
         'folke/trouble.nvim',
@@ -216,6 +213,13 @@ local plugins = {
         opt = true,
         cmd = { "DocsViewToggle" },
     },
+    -- editor plugins
+    {
+        'windwp/nvim-autopairs',
+        event = 'InsertEnter',
+        opts = {},
+    },
+    'ethanholz/nvim-lastplace',
 
 }
 
