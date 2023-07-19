@@ -38,4 +38,6 @@ We can install hack with sudo apt install fonts-hack-ttf
         ```
         yum groupinstall 'Development Tools'
         ```
-
+### dependencies 
+        1. ripgrep
+        2. fd

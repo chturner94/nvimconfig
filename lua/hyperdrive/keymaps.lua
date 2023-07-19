@@ -35,7 +35,7 @@ vim.keymap.set('n', 'flC', tele_builtin.lsp_incoming_calls, {})
 vim.keymap.set('n', 'flD', tele_builtin.lsp_definitions, {})
 
 -- NeoTree
-vim.keymap.set('n', '<leader>tt', '<Cmd>NeoTreeFocusToggle<CR>')
+vim.keymap.set('n', '<leader>tt', '<Cmd>Neotree toggle<CR>')
 
 -- Harpoon
 vim.keymap.set('n', '<leader>hh', '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
