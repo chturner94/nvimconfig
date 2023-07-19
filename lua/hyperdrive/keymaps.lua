@@ -1,6 +1,9 @@
 local opts = { noremap = true, silent = true }
 local tele_builtin = require('telescope.builtin')
 
+-- Helper functions for keymaps
+
+
 -- Navigate vim panes better
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
@@ -48,3 +51,4 @@ vim.keymap.set('n', '<leader>h5', '<Cmd>lua require("harpoon.ui").nav_file(5)<CR
 
 -- Workspaces
 vim.keymap.set("n", "<leader>fp", function() vim.cmd("Telescope projections") end)
+

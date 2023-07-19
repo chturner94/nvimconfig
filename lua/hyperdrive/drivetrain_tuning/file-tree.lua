@@ -1,5 +1,3 @@
-require('neo-tree').setup()
-
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 -- If you want icons for diagnostic errors, you'll need to define them somewhere:
@@ -264,4 +262,4 @@ require("neo-tree").setup({
     }
 })
 
-vim.cmd([[nnoremap \ :Neotree<cr>]])
+vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
