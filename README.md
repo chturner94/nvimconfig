@@ -39,5 +39,20 @@ We can install hack with sudo apt install fonts-hack-ttf
         yum groupinstall 'Development Tools'
         ```
 ### dependencies 
-        1. ripgrep
-        2. fd
+        1. sudo apt install ripgrep
+        2. sudo apt install fd
+        sudo apt install python3-pip
+
+pynvim
+pip3 install pynvim
+pip3 install --upgrade pynvim
+
+neovim npm
+sudo npm -g install neovim
+
+sudo apt install cargo
+sudo apt install luarocks
+
+sudo apt-get install openjdk-17-jdk -- should install and map java and javac
+
+sudo npm -g install tree-sitter

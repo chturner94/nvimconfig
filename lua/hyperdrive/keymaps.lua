@@ -51,4 +51,3 @@ vim.keymap.set('n', '<leader>h5', '<Cmd>lua require("harpoon.ui").nav_file(5)<CR
 
 -- Workspaces
 vim.keymap.set("n", "<leader>fp", function() vim.cmd("Telescope projections") end)
-

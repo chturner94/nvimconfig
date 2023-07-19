@@ -18,6 +18,15 @@ local plugins = {
     'nvim-lua/popup.nvim',
     'stevearc/dressing.nvim',
     'MunifTanjim/nui.nvim',
+    {
+        's1n7ax/nvim-window-picker',
+        name = 'window-picker',
+        event = 'VeryLazy',
+        version = '2.*',
+        config = function()
+            require 'window-picker'.setup()
+        end,
+    },
     -- themes & UI
     {
         'dracula_pro',
@@ -37,20 +46,20 @@ local plugins = {
         run = 'cd lua/fzy && make'
     },
     -- Barbar
-     {
+    {
         'romgrk/barbar.nvim',
         dependencies = {
-           'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
+            'lewis6991/gitsigns.nvim',     -- OPTIONAL: for git status
             'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
         },
         init = function() vim.g.barbar_auto_setup = false end,
         opts = {
-    -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-     animation = true,
-     insert_at_start = true,
-    -- …etc.
-    },
-     version = '^1.0.0', -- optional: only update when a new 1.x version is released
+            -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+            animation = true,
+            insert_at_start = true,
+            -- …etc.
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
 
     -- Utility

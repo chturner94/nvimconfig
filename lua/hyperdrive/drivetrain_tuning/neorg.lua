@@ -1,3 +1,4 @@
+local neotree = require("neo-tree")
 require("neorg").setup {
     load = {
         ["core.defaults"] = {}, -- Loads default behaviour
@@ -6,6 +7,8 @@ require("neorg").setup {
                 hook = function(keybinds)
                     keybinds.map("norg", "n", "<leader>cb",
                         "<cmd>:Neorg keybind all core.looking-glass.magnify-code-block<CR>")
+                    keybinds.map("norg", "n", "<leader>nf",
+                        "<cmd>:Neotree dir=~/notes<CR>")
                 end,
             }
         },
