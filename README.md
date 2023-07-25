@@ -56,3 +56,7 @@ sudo apt install luarocks
 sudo apt-get install openjdk-17-jdk -- should install and map java and javac
 
 sudo npm -g install tree-sitter
+
+cargo install tree-sitter-cli
+
+~/.cargo/bin

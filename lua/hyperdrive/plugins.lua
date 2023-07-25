@@ -155,11 +155,6 @@ local plugins = {
         tag = '0.1.2',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
-    'nvim-telescope/telescope-project.nvim',
-    {
-        "gnikdroy/projections.nvim",
-        branch = 'pre_release',
-    },
     {
         'nvim-telescope/telescope-file-browser.nvim',
         dependencies = {
@@ -181,6 +176,7 @@ local plugins = {
             'nvim-tree/nvim-web-devicons',
         },
     },
+    'folke/neoconf.nvim',
 
     -- Which Key
     {

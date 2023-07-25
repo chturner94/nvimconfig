@@ -1,7 +1,5 @@
-require('telescope').load_extension('project')
 require('telescope').load_extension('frecency')
 
-local project_actions = require('telescope._extensions.project.actions')
 
 require('telescope').setup {
     defaults = {
@@ -28,22 +26,9 @@ require('telescope').setup {
         file_browser = {
             hijack_netrw = false,
         },
-        project = {
-            base_dirs = {
-                '~/development/javascript/fvtt-knowledge-recalled-pf2e',
-            },
-            order_by = 'recent',
-            on_project_selected = function(prompt_bufnr)
-                project_actions.changeworking_directory(prompt_bufnr, false)
-                require('harpoon.ui').nav_file(1)
-            end,
-        },
     },
 }
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('file_browser')
 require "telescope".load_extension("frecency")
-
-require('projections').setup({})
-require('telescope').load_extension('projections')

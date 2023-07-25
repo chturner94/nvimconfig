@@ -3,3 +3,4 @@ pack/*
 plugin/*
 lazy-lock.json
 .luarc.json
+neoconf.json
