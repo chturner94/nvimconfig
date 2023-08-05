@@ -23,7 +23,7 @@ local plugins = {
         name = 'window-picker',
         event = 'VeryLazy',
         version = '2.*',
-        config = function()
+config = function()
             require 'window-picker'.setup()
         end,
     },
@@ -105,9 +105,27 @@ local plugins = {
     'kwkarlwang/bufresize.nvim',
 
     -- dap
-    'mfussenegger/nvim-dap',
-    'rcarriga/nvim-dap-ui',
+    {
+        "mfussenegger/nvim-dap",
+        event = "VeryLazy",
+        dependencies = {
+            "mfussenegger/nvim-dap-python",
+            "leoluz/nvim-dap-go",
+            "rcarriga/nvim-dap-ui",
+            "theHamsta/nvim-dap-virtual-text",
+        },
+    },
 
+    {
+        "anuvyklack/hydra.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "anuvyklack/keymap-layer.nvim",
+        },
+        config = function()
+            require("hyperdrive.drivetrain_tuning.hydra.hydra")
+        end,
+    },
     -- notes & docs
 
     -- Neorg
